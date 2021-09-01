@@ -9,20 +9,20 @@ public class MoodAnalyzerTest {
 	
 	@Test
 	public void givenMood_whenhappy_shouldReturnHappy() {
-		AnalyzeMood moodAnalizer =new AnalyzeMood();
-		String mood=moodAnalizer.analyseMood("I am in happy mood");
+		AnalyzeMood moodAnalizer =new AnalyzeMood("I am in happy mood");
+		String mood=moodAnalizer.analyseMood();
 		assertEquals("happy",mood);
 	}
 	@Test
-	public void givenMood_whensad_shouldReturnSad() {
-		AnalyzeMood moodAnalizer =new AnalyzeMood();
-		String mood=moodAnalizer.analyseMood("I am in sad mood");
+	public void givenMood_whensad_shouldReturnSad() {  //repeat 1.1
+		AnalyzeMood moodAnalizer =new AnalyzeMood("I am in sad mood");
+		String mood=moodAnalizer.analyseMood();
 		assertEquals("sad",mood);
 	}
 	@Test
-	public void givenMood_whenAnyMood_shouldReturnHappy() {
-		AnalyzeMood moodAnalizer =new AnalyzeMood();
-		String mood=moodAnalizer.analyseMood("I am in any mood");
+	public void givenMood_whenAnyMood_shouldReturnHappy() {  //repeat 1.2
+		AnalyzeMood moodAnalizer =new AnalyzeMood("I am in any mood");
+		String mood=moodAnalizer.analyseMood();
 		assertEquals("happy",mood);
 	}
 

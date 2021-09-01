@@ -1,7 +1,12 @@
 package MoodAnalyzer;
 
 public class AnalyzeMood {
-	public String analyseMood (String msg) {
+	private String msg;
+	
+	public AnalyzeMood(String msg) {   //refactored
+		this.msg = msg;
+	}
+	public String analyseMood () {
 		if(msg.contains("happy")) { 	//uc1
 			return "happy";
 		}
