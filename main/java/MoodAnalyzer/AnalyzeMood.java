@@ -2,9 +2,11 @@ package MoodAnalyzer;
 
 public class AnalyzeMood {
 	private String msg;
+	public ExceptionType exceptionType;
 	
-	public AnalyzeMood(String msg) {   //refactored
-		this.msg = msg;
+	public AnalyzeMood(String msg,ExceptionType exceptionType) {//refactored and uc3
+		super();
+		this.exceptionType=exceptionType;
 	}
 	public String analyseMood () throws Exception {
 		try {
@@ -21,7 +23,7 @@ public class AnalyzeMood {
 				return "happy";
 			}
 		}
-		catch(NullPointerException exception) { //exception
+		catch(NullPointerException exception) { //exception 
 			return "Happy";
 		}
 	}
